@@ -16,16 +16,16 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true,
     powerPreference: "high-performance",   
 })
-renderer.setSiza(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-renderer.toneMapping = THREE.ACESFilmicToneMApping;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 0.75;
 document.querySelector(".garage").appendChild(renderer.domElement);
 
 const ambientLight = new THREE.AmbientLight(0xffffff, 0);
 scene.add(ambientLight);
 
-const directionalLight = new THREE.DirectionLight(0xcc8ee8, 1.5);
+const directionalLight = new THREE.DirectionalLight(0xcc8ee8, 1.5);
 directionalLight.position.set(5, 5, 5);
 directionalLight.castShadow = true;
 directionalLight.castShadow.mapSize.width = 2048;
@@ -82,6 +82,7 @@ const createEmissiveMaterial = (color, intesity = 2) => {
 
 const loader = new THREE.GLTFLoader();
 loader.load("./assets/scene.gltf", function (gltf) {
+
     const model = gltf.scene;
 
     const box = new THREE.Box3().setFromObject(model);
