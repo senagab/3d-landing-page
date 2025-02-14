@@ -9,7 +9,8 @@
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?&logo=javascript&logoColor=black" alt="Javascript">
     <img src="https://img.shields.io/badge/WebGL-990000?&logo=webgl" alt="WebGL">
 </p>
-This project is a **Three.js-powered 3D scene** featuring **high-quality lighting, bloom effects, and camera controls** for an immersive experience. The scene is rendered with realistic light interactions, shadows, and a post-processing bloom effect to enhance the visuals.  
+
+This project is a <b>Three.js-powered 3D scene</b> featuring <b>high-quality lighting, bloom effects, and camera controls</b> for an immersive experience. The scene is rendered with realistic light interactions, shadows, and a post-processing bloom effect to enhance the visuals.   
 
 ## ✨ Features  
 
