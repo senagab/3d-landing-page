@@ -48,5 +48,5 @@ This project is a **Three.js-powered 3D scene** featuring **high-quality lightin
     ```
 
 ## 🖼️ Preview
-![Screenshot Home](https://github.com/senagab/garage-3d/tree/main/assets/preview.png)
+![Screenshot Home](https://github.com/senagab/servidores-estaticos/blob/main/preview2.png)
     
