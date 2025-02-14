@@ -1,4 +1,4 @@
-const scene = THREE.Scene();
+const scene = new THREE.Scene();
 
 scene.background = new THREE.Color(0x151620);
 
@@ -28,8 +28,8 @@ scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xcc8ee8, 1.5);
 directionalLight.position.set(5, 5, 5);
 directionalLight.castShadow = true;
-directionalLight.castShadow.mapSize.width = 2048;
-directionalLight.castShadow.mapSize.height = 2048;
+directionalLight.shadow.mapSize.width = 2048;
+directionalLight.shadow.mapSize.height = 2048;
 scene.add(directionalLight);
 
 const pointLight = new THREE.PointLight(0xffd600, 3, 50);
@@ -71,14 +71,15 @@ controls.minDistance = 10;
 controls.maxDistance = 50;
 controls.maxPolarAngle = Math.PI / 2;
 
-const createEmissiveMaterial = (color, intesity = 2) => {
+const createEmissiveMaterial = (color, intensity = 2) => {
     return new THREE.MeshStandardMaterial({
         color: color,
         emissive: color,
-        emissiveIntensity: intensity,
+        emissiveIntensity: intensity, // Fix here
         toneMapped: false
     });
 };
+
 
 const loader = new THREE.GLTFLoader();
 loader.load("./assets/scene.gltf", function (gltf) {
